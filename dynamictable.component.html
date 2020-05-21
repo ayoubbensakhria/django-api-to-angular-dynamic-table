@@ -1,0 +1,110 @@
+<div class="dynamic-table-container mat-elevation-z8">
+  <div class="card-header-tab card-header">
+    <div class="card-header-title font-size-lg text-capitalize font-weight-normal">
+      PATIENTS
+    </div>
+    <div class="btn-actions-pane-right">
+      <div role="group" class="btn-group-sm btn-group">
+        <button class="mb-2 mr-2 btn-icon btn-pill btn btn-success" (click)="refresh()">
+        <i class="fa fa-refresh btn-icon-wrapper"></i>
+        Actualiser
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="dynamic-table-loading-shade" *ngIf="isLoadingResults || isRateLimitReached">
+    <mat-spinner *ngIf="isLoadingResults"></mat-spinner>
+    <div class="dynamic-table-rate-limit-reached" *ngIf="isRateLimitReached">
+      La limite du serveur API a été atteinte. Veuillez réessayer ...
+    </div>
+  </div>
+
+  <div class="dynamic-table-table-container">
+    <ng-container style="padding:20px">
+
+
+      <div class="card-body">
+        <div layout="row" layout-wrap>
+          <mat-form-field>
+
+            <input matInput type="text" (keyup)="applyFilter($event)" [(ngModel)]="value" placeholder="Recherche" />
+            <!--
+            <button mat-button *ngIf="value" matSuffix mat-icon-button aria-label="Clear" (click)="value=''">
+              <mat-icon>close</mat-icon>
+            </button>
+            -->
+          </mat-form-field>
+          <mat-form-field>
+            <input matInput [matDatepicker]="picker" placeholder="Journée du:" (dateInput)="applyDateFilter($event)"
+              (dateChange)="applyDateFilter($event)">
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+          </mat-form-field>
+
+          <section class="dynamic-section">
+            <mat-checkbox class="dynamic-margin" [(ngModel)]="priority">PRIORITAIRE</mat-checkbox>
+            <mat-checkbox class="dynamic-margin" [(ngModel)]="extern">EXTERNE</mat-checkbox>
+            <mat-checkbox class="dynamic-margin" [(ngModel)]="instance">EN INSTANCE</mat-checkbox>
+          </section>
+
+        </div>
+      </div>
+
+
+
+    </ng-container>
+    <table mat-table [dataSource]="data" class="dynamic-table-table" matSort matSortActive="name" matSortDisableClear
+      matSortDirection="desc">
+      <!-- Number Column -->
+      <ng-container matColumnDef="name">
+        <th mat-header-cell *matHeaderCellDef>Name</th>
+        <td mat-cell *matCellDef="let row" matRipple>
+         <button mat-icon-button [matMenuTriggerFor]="menu">
+          <mat-icon>more_vert</mat-icon>
+        </button>
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item>
+            <mat-icon>dialpad</mat-icon>
+            <span>Consulter résultat</span>
+          </button>
+          <button mat-menu-item disabled>
+            <mat-icon>voicemail</mat-icon>
+            <span>Modifier</span>
+          </button>
+          <button mat-menu-item>
+            <mat-icon>notifications_off</mat-icon>
+            <span>Supprimer</span>
+          </button>
+        </mat-menu>
+        {{row.name}}
+        </td>
+      </ng-container>
+
+      <!-- Title Column -->
+      <ng-container matColumnDef="group">
+        <th mat-header-cell *matHeaderCellDef>Group</th>
+        <td mat-cell *matCellDef="let row" >{{row.group}}</td>
+      </ng-container>
+
+      <!-- State Column -->
+      <ng-container matColumnDef="sampling_date">
+        <th mat-header-cell *matHeaderCellDef>State</th>
+        <td mat-cell *matCellDef="let row">{{row.sampling_date | date}}</td>
+      </ng-container>
+
+      <!-- Created Column -->
+      <ng-container matColumnDef="birthday">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header disableClear>
+          Created
+        </th>
+        <td mat-cell *matCellDef="let row">{{row.birthday | date}}</td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+  </div>
+  <!--pageSize value will be the same as PAGE_SIZE (BACKEND)-->
+  <mat-paginator [length]="resultsLength" [pageSize]="resultsPerPage"></mat-paginator>
+
+</div>
