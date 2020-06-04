@@ -9,7 +9,7 @@ Lets assume that you've already a Django API up and running in the backend, with
     'rest_framework',
     'corsheaders', installed and configured.
 
-![alt sc](https://lh3.googleusercontent.com/acVla6LASzc4dkLyCg17FwuEgbiNBz0gcctVGJS4ffhThHjYCl0uYldBA_cd4M0wF5ZeNCYf2yNAtHCeDl7VIwOwxFUMr82uSi2XyIKA0wcN3BekRQbexwJ7VJxe9qviPrYn2SPBtRoTmTajWyDkFo5ZzlzvFN0waIUhVPVkmzmRBc3G1nTe6mUIY7cu5P2q1V44g0IgOp9UCfZ969yBdOVZ8qe0fflYtj4x8c_tcdUbOkGZYemt4fWzYX-zKB1uEOOkpU3zRfIOaftNwVF99xx2MCK_JED5E_QWtzl7nnthst4yj1oEzS0fzPyOXrsdgmZPVmt6uUgklaiNkAJDwGc_KzrOwOqm08qcCBwyy7TGzQpLPJlalrCnKaFrc6_PrXtj9N-KV__StVYSbejw4scAOZUrtFq5tOxQ35cFiLJ2i6vrLVvAnJvOdoydEzv7x66u8sJK-UkW7im7g9wk-h1ZgVN3WZySnbDyabSSQoVxtcVeCsETBde32-CvHHMa2DuHeVgPDvBOmtMk-haja1mcyR_F060-mSRteOe7wMfGY6_Q2bmZyNKpu2K-gPzJx1ibLZVEMC2YbEMlIufCmhNFiG0Tza279nf-cqUIlQ-D162ctiokQA4UBE6HggQwQTKmsdHRL0pLKY8wvYQkxCWtRAWJojdUm9AVm4x7ET0abUjdyjCIeQHwA3Lf2A=w1113-h515-no?authuser=0)
+![alt sc](https://github.com/ayoubbensakhria/django-api-to-angular-dynamic-table/blob/master/Capture%20d%E2%80%99e%CC%81cran%202020-05-21%20a%CC%80%2023.57.16.png?raw=true)
 
 
 ```bash
@@ -19,9 +19,9 @@ git clone https://github.com/ayoubbensakhria/django-api-to-angular-dynamic-table
 ## Usage
 Replace 'patient' by yours in App/API/angular interface
 
-![alt sc](https://lh3.googleusercontent.com/RmklFFsqO73KgAOmnKcGl4BTWSxAxKlCRY7rp3Et_xWYDAJRvJqBO_FTkEyw5zr1X2Ga-L6eue46-2yLQCOwJE_AWJ-UU_234Nn67CjFKR8ZiJXXzYtayqLeiZMGF-XJOwbr0oAUzVjlDRJ0aDNYMvEKKRBc7TUDdDBCeqLDvIxtfPLKbNbzVoPzbxi41qA1Y5SJL9vse0SAVrtfybIB2kEC8dajwAdgjv6zmWP5AAU3_pmlnyXkosOuhDNSLpvfjD4AieQSPNETXpwozooTiVOq9lGq9IdZR1MATToouVKjiO5fGaldxLVYXObF0B6_40eAmVikjMbj_2RjDnWPSlx9ibjY-wbX0r4E8wisWahD-FQtSJkF1564XH3hXtHHx4uFipid53vIrXrD3d4bkHo5BSw92wKK5akLk7ObCbAiYK1WonYuFpG3JTbiMV963cenqUDmCSLDpCOfW3lKPp95udapstoH2EENvvNL_c5zd_CLtidARzWcruVIZJEz5bFo_WeLgW2EyVFz3JyDPa8T34kUu3QqKLPmwBSOVj_PsJrPFZ8dbS_FYkkeu0OgyIHoM9zsrzjv3oXu05PJG6hTlusLB8ZB1F3x7bYNArbQr5IoIr5SuyhRn9IhdZa79zCdQIttsXYE3OU85IpgSpmr0eVTkTpjTVgPWbXnyF2wbVNjPu-9XRfiuonusA=w1112-h331-no?authuser=0)
+![alt sc](https://github.com/ayoubbensakhria/django-api-to-angular-dynamic-table/blob/master/Capture%20d%E2%80%99e%CC%81cran%202020-05-22%20a%CC%80%2000.06.38.png?raw=true)
 
-![alt sc](https://lh3.googleusercontent.com/TH0JKsQEHTTYJrc0qOQEy5iNTs_sP0v6tXvQ1YxIJGTdRpI6DX2Ch9qeZGN5WUvBVI_-g57fXKHnnYnJQ6B4fzw6tiqQIo-4gYFzBvZX2NnLb9Fjbn_2ujIh7EJDvUp1uxYy1UvNbQ4054tby3LxRIIo5rZ8G5030I9_EHbVcq11IRBYImns7jabmD4BG1x1aY2W-ZhAzkRnUrP9592VoavM6SXtMf8pSC3Q6czFTnlZ0lyEhhCJwKZMqGpcu05XYA2KrbBdpZN2HSc35c4dpSHUDDu7ruvm8_FFO2FbdQkhu-KMcXoOyDaLcoETgelP2GtW3AdJPmcg5KzWuApOjmAR2pCo5QwgKbGWpr4sZ3ws9paacijvbE-_HLvlzHLiRsny3is-XxByWBU8g6khbFQYhdSJKMh-9kM-TcITGX5_BjMH1-GGeIsly1RfoRHQoQoPXr4P5vNw9KwK0WBGRzJ6wPZoAwgSc6VG5SfO3prZrLcC9nd7E86aFhUvskbYye3SkZpQfCD_0rMA9tUQ5dchYxfcqS-wis_fNLGsqUktsr6poFFxzz2R6V8rMbvwfu3xy60C6CKDKRL6frmGzQ84Aw8TAx_OmQ5tt06qbcXZw8FVRgi-MvHiwdMlSj1lPB2BdhqNpRneid3qaeZl-g1-_EoNiIZgPhHDUEjO5OZJ-pngyUD2aSMPIDCLrA=w1113-h515-no?authuser=0)
+![alt sc](https://github.com/ayoubbensakhria/django-api-to-angular-dynamic-table/blob/master/Capture%20d%E2%80%99e%CC%81cran%202020-05-22%20a%CC%80%2000.05.47.png?raw=true)
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
